@@ -1,0 +1,135 @@
+@keyframes bg_transition {
+    from {
+        color: purple;
+    }
+    to {
+        color: palevioletred;
+    }
+}
+
+body {
+    color: #1D2228;
+    margin: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    font-size: 100px;
+    text-align: center;
+    animation-name: bg_transition;
+    animation-duration: 4s;
+}
+
+h2 {
+    font-size: 50px;
+    color: #473d0b;
+}
+
+h3 {
+    font-size: 25px;
+    color: #225f53;
+}
+
+p {
+    line-height: 40px;
+}
+
+img {
+    padding: 10px 0px 10px 0px;
+    border-radius: 30px;
+}
+
+ul {
+    list-style-type: circle;
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.clicked {
+    text-transform: uppercase;
+}
+
+.navbar {
+    text-align: center;
+    color: #473d0b;
+    margin: 20px 0px 20px 0px;
+}
+
+.navbar>a {
+    margin: 0px 5px 0px 5px;
+    padding: 5px;
+    border: #225f53 4px solid;
+    border-radius: 25%;
+    color: #225f53;
+    font-weight: 700;
+    font-size: large;
+}
+
+.skip a {
+    position: absolute;
+    top: -40px;
+}
+
+.pet_cover {
+    width: 200px;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.photo_gallery {
+    grid-template-columns: 200px 200px;
+    margin: auto
+}
+
+.photo_gallery>img,
+.photo_gallery>video,
+.photo_gallery>figure>img,
+.photo_gallery>figure>video {
+    width: 180px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.profile {
+    padding: 20px 0px 20px 0px;
+}
+
+
+/* desktop view */
+
+@media screen and (min-width: 800px) {
+    .skip a:focus {
+        top: 20px;
+        visibility: visible;
+        background-color: #225f53;
+        color: white;
+        padding: 2% 10% 2% 10%;
+    }
+    .pet_cover {
+        width: 500px;
+        max-height: 350px;
+        object-fit: cover;
+    }
+    .photo_gallery {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        margin: auto
+    }
+    .photo_gallery>img,
+    .photo_gallery>video,
+    .photo_gallery>figure>img,
+    .photo_gallery>figure>video {
+        width: 350px;
+        height: 300px;
+        object-fit: cover;
+    }
+}
+
+@media (prefers-reduced-motion) {
+    .gif {
+        display: none;
+    }
+    h1 {
+        animation: none;
+    }
+}
